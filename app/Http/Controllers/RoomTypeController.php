@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\RoomType;
 use Illuminate\Http\Request;
+use App\Traits\StoreImageTrait;
 
 class RoomTypeController extends Controller
 {
+    use StoreImageTrait;
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +28,16 @@ class RoomTypeController extends Controller
      */
     public function create()
     {
-        //
+ 
+        // $formInput = $request->all();
+ 
+        // $formInput['image'] = $this->verifyAndStoreImage($request, 'image', 'post');
+ 
+        // $post = Post::create($formInput);
+ 
+        // flash('Post saved successfully.')->success();
+ 
+        // return redirect(route('admin.posts.index'));
     }
 
     /**
@@ -37,7 +48,16 @@ class RoomTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+ 
+        // $formInput = $request->all();
+ 
+        // $formInput['image'] = $this->verifyAndStoreImage($request, 'image', 'post');
+ 
+        // $post = Post::create($formInput);
+ 
+        // flash('Post saved successfully.')->success();
+ 
+        // return redirect(route('admin.posts.index'));
     }
 
     /**

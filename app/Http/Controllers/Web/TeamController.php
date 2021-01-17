@@ -6,8 +6,11 @@ use App\Team;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Traits\TeamTrait;
+
 class TeamController extends Controller
 {
+    use TeamTrait;
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = $this->addUpperCase(Team::get());
+        return response()->json($teams, 200);
     }
 
     /**

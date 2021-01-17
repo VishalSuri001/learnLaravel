@@ -46,3 +46,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('Web')->group( function(){
     Route::resource('team', 'TeamController');
 });
+
+Route::resource('users', 'UserController');
